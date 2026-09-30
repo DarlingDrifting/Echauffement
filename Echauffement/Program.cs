@@ -12,7 +12,7 @@ class Program
 
         // Etape 1 : présentez-vous en écrivant votre prénom et votre jeu préféré
         
-
+        Console.WriteLine("Bonjour, je m'appelle Cyril et mon jeu préféré est The Last of us 2");
 
         // Etape 2 : demandez à l'utilisateur son prénom et son âge
         
@@ -48,6 +48,6 @@ class Program
          * Après votre dernier commit, faites un push de votre projet pour qu'il soit accessible sur github.com
          */
 
-         
+
     }
 }
