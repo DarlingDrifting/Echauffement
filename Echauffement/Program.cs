@@ -9,6 +9,7 @@ class Program
          */
         string friendName = "I dont know it bro";
         int friendAge = 0;
+        float friendMoney = 0.0f;
         // initial commit
 
         // Etape 1 : présentez-vous en écrivant votre prénom et votre jeu préféré
@@ -18,9 +19,10 @@ class Program
         // Etape 2 : demandez à l'utilisateur son prénom et son âge
 
         Console.WriteLine("Quel est ton prénom ?");
-        friendName = Console.ReadLine();
+            friendName = Console.ReadLine();
+
         Console.WriteLine("Quel est ton âge ?");
-        friendAge = Convert.ToInt32(Console.ReadLine());
+            friendAge = Convert.ToInt32(Console.ReadLine());
 
         // Etape 3 : affichez soit "Tu es majeur", soit "Tu es mineur" dépendant de l'âge fourni par l'utilisateur
 
@@ -32,11 +34,12 @@ class Program
             {
                 Console.WriteLine("Tu es mineur");
             }
- 
+
 
         // Etape 4 : demandez maintenant à l'utilisateur combien d'euro il a (nombre décimal)
 
-
+        Console.WriteLine("T'as combien d'euro ?... C'est pour un pote");
+            friendMoney = Convert.ToSingle(Console.ReadLine());
 
         // Etape 5 : affichez maintenant 4 choix d'armes avec chacune un prix
 
