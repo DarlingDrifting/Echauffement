@@ -10,6 +10,7 @@ class Program
         string friendName = "I dont know it bro";
         int friendAge = 0;
         float friendMoney = 0.0f;
+        int weaponChoice = 0;
         // initial commit
 
         // Etape 1 : présentez-vous en écrivant votre prénom et votre jeu préféré
@@ -44,6 +45,7 @@ class Program
         // Etape 5 : affichez maintenant 4 choix d'armes avec chacune un prix
 
         Console.WriteLine("Ok, je vois, tu as le choix entre ces 4 armes :");
+
         Console.WriteLine("1. Couteau - 6 euros");
         Console.WriteLine("2. Hache - 18 euros");
         Console.WriteLine("3. Pistolet - 60 euros");
@@ -51,7 +53,8 @@ class Program
 
         // Etape 6 : laissez l'utilisateur choisir l'une de ces 4 armes en indiquant un nombre entre 1 et 4
 
-
+        Console.WriteLine("Ecris le numero de l'arme que tu souhaite aquerir");
+            weaponChoice = Convert.ToInt32(Console.ReadLine());
 
         // Etape 7a : vérifiez si l'utilisateur a assez d'argent par rapport à la somme qu'il avait rentré à l'étape 4
 
