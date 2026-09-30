@@ -13,11 +13,11 @@ class Program
         int weaponPrice = 6;
         int weaponChoice = 0;
         bool isAdult = false;
-        // initial commit
 
         // Etape 1 : présentez-vous en écrivant votre prénom et votre jeu préféré
 
         Console.WriteLine("Bonjour, je m'appelle Cyril et mon jeu préféré est The Last of us 2");
+        Console.WriteLine("");
 
         // Etape 2 : demandez à l'utilisateur son prénom et son âge
 
@@ -26,6 +26,8 @@ class Program
 
         Console.WriteLine("Quel est ton âge ?");
             friendAge = Convert.ToInt32(Console.ReadLine());
+
+        Console.WriteLine("");
 
         // Etape 3 : affichez soit "Tu es majeur", soit "Tu es mineur" dépendant de l'âge fourni par l'utilisateur
 
@@ -36,31 +38,31 @@ class Program
             }
         else
             {
-                Console.WriteLine("Tu es mineur");
-                isAdult = false;
+                Console.WriteLine("Tu es mineur"); //isAdult déjà initialisé en false
             }
-
+        Console.WriteLine("");
 
         // Etape 4 : demandez maintenant à l'utilisateur combien d'euro il a (nombre décimal)
 
-        Console.WriteLine("T'as combien d'euro ?... C'est pour un pote");
+        Console.WriteLine("T'as combien d'euro ?... C'est pour un pote...");
             friendMoney = Convert.ToSingle(Console.ReadLine());
 
         // Etape 5 : affichez maintenant 4 choix d'armes avec chacune un prix
 
         Console.WriteLine("Ok, je vois, tu as le choix entre ces 4 armes :");
-
+        Console.WriteLine("");
         Console.WriteLine("1. Couteau - 6 euros");
         Console.WriteLine("2. Hache - 18 euros");        
         Console.WriteLine("3. Pistolet - 60 euros");            
         Console.WriteLine("4. Fusil - 120 euros");
+        Console.WriteLine("");
             
         // Etape 6 : laissez l'utilisateur choisir l'une de ces 4 armes en indiquant un nombre entre 1 et 4
 
-        Console.WriteLine("Ecris le numero de l'arme que tu souhaite aquerir");
+        Console.WriteLine("Ecris le numero de l'arme que tu souhaite aquerir :");
             weaponChoice = Convert.ToInt32(Console.ReadLine());
 
-        if (weaponChoice == 2)
+        if (weaponChoice == 2) // weaponPrice initialisé à 6 -> inutile de demander weaponChoice == 1
             {
                 weaponPrice = 18;
             }
@@ -72,18 +74,19 @@ class Program
             {
                 weaponPrice = 120;
             }
+        Console.WriteLine("");
 
         // Etape 7a : vérifiez si l'utilisateur a assez d'argent par rapport à la somme qu'il avait rentré à l'étape 4
 
         if (isAdult is false)
         {
-            Console.WriteLine("minute papillion, tu es trop jeune...");
+            Console.WriteLine("minute papillion, tu es trop jeune...!");
         }
         else
         {
             if (friendMoney >= weaponPrice)
             {
-                Console.WriteLine("Tu peux y aller, je suis riche maintenant !");
+                Console.WriteLine("Tu peux y aller, l'arme est à toi !");
                 friendMoney -= weaponPrice;
                 Console.WriteLine("il te reste " + friendMoney + " euros");
             }
