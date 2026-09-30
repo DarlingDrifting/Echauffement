@@ -12,6 +12,7 @@ class Program
         float friendMoney = 0.0f;
         int weaponPrice = 6;
         int weaponChoice = 0;
+        bool isAdult = false;
         // initial commit
 
         // Etape 1 : présentez-vous en écrivant votre prénom et votre jeu préféré
@@ -30,11 +31,13 @@ class Program
 
         if (friendAge >= 18)
             {
-                  Console.WriteLine("Tu es majeur");
+                Console.WriteLine("Tu es majeur");
+                isAdult = true;
             }
         else
             {
                 Console.WriteLine("Tu es mineur");
+                isAdult = false;
             }
 
 
@@ -72,14 +75,23 @@ class Program
 
         // Etape 7a : vérifiez si l'utilisateur a assez d'argent par rapport à la somme qu'il avait rentré à l'étape 4
 
-        if (friendMoney >= weaponPrice)
+        if (isAdult is false)
+        {
+            Console.WriteLine("minute papillion, tu es trop jeune...");
+        }
+        else
+        {
+            if (friendMoney >= weaponPrice)
             {
                 Console.WriteLine("Tu peux y aller, je suis riche maintenant !");
+                friendMoney -= weaponPrice;
+                Console.WriteLine("il te reste " + friendMoney + " euros");
             }
-        else
+            else
             {
                 Console.WriteLine("Hé, tu peux pas tu le payer, vas-t-en !");
             }
+        } 
 
         // Etape 7b : modifiez l'étape 7a pour ajouter un connecteur logique qui vérifie que l'utilisateur est majeur en plus d'avoir assez d'argent
         // Lorsque l'utilisateur respecte ces demandes, retirez le prix de l'arme de l'argent de l'utilisateur, puis confirmez à l'utilisateur que l'action a été effectuée 
